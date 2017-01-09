@@ -1,0 +1,16 @@
+
+<div class="weekDays">
+    <div ng-repeat="weekDay in $ctrl.weekDays track by $index">
+        {{weekDay}}
+    </div>
+</div>
+<div class="weekNumbers">
+    <div ng-repeat="week in $ctrl.getWeekNumbers() track by $index">
+        {{week}}
+    </div>
+</div>
+<div class="days">
+    <div ng-class="{innactive: !dateItem.thisMonth, selected: $ctrl.selectedDate.getTime() === dateItem.date.getTime()}" ng-repeat="dateItem in $ctrl.daysCache">
+        <a href="#" ng-click="$ctrl.changeDate(dateItem)">{{dateItem.date.getDate()}}</a>
+    </div>
+</div>

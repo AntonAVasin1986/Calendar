@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html ng-app="calendar">
+
+    <head>
+        <title>Calendar Demo</title>
+
+        <link rel="stylesheet" href="dst/styles.css">
+
+        <meta charset="utf-8">
+
+        <script type="text/javascript" src="angular.min.js"></script>
+        <script type="text/javascript" src="dst/calendar.js"></script>
+    </head>
+
+    <body ng-controller="AppController">
+        <calendar-component date="selectedDate" date-changed="selectedDate = date"></calendar-component>
+        <p>Selected Date: {{selectedDate | date:'dd MMMM yyyy'}}</p>
+    </body>
+
+</html>

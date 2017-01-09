@@ -1,0 +1,22 @@
+<div class="ctrl">
+    <div class="row">
+        <div class="col">
+            <span>{{$ctrl.monthNames[$ctrl.currentView.month]}}</span>
+        </div>
+        <div class="col">
+            <span>
+                <a href="#" ng-click="$ctrl.shiftYear(-1)">&lt&lt</a>
+                {{$ctrl.currentView.year}}
+                <a href="#" ng-click="$ctrl.shiftYear(1)">&gt&gt</a>
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div ng-class="{active: $ctrl.currentView.month === $index}" class="monthCell" ng-repeat="mName in $ctrl.monthNames">
+            <a href="#" ng-click="$ctrl.changeMonthTo($index)">{{mName | limitTo:3}}</a>
+        </div>
+    </div>
+    <div class="row daysGrid">
+        <days-grid selected-date="$ctrl.date" view-month="$ctrl.currentView.month" view-year="$ctrl.currentView.year" selected-date-changed="$ctrl.changeDate(newDate)"></days-grid>
+    </div>
+</div>
