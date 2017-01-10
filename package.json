@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Demo project",
   "scripts": {
-    "start": ""
+    "start": "webpack && lite-server"
   },
   "author": "Anton Vasin",
   "license": "MIT",
