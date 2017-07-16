@@ -1,4 +1,4 @@
 # Calendar (angular version)
 
-1. Установка зависимостей: `npm install`
-2. Сборка и запуск: `npm start`
+1. Install dependencies: `npm install`
+2. Build and start: `npm start`
